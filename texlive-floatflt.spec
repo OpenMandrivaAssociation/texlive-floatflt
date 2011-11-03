@@ -1,3 +1,9 @@
+# revision 23445
+# category Package
+# catalog-ctan /macros/latex/contrib/floatflt
+# catalog-date 2008-08-20 21:25:58 +0200
+# catalog-license other-nonfree
+# catalog-version 1.31
 Name:		texlive-floatflt
 Version:	1.31
 Release:	1
@@ -48,6 +54,7 @@ pages.
 #- source
 %doc %{_texmfdistdir}/source/latex/floatflt/floatflt.dtx
 %doc %{_texmfdistdir}/source/latex/floatflt/floatflt.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -58,3 +65,5 @@ pages.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
