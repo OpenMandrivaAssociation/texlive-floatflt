@@ -6,7 +6,7 @@
 # catalog-version 1.31
 Name:		texlive-floatflt
 Version:	1.31
-Release:	5
+Release:	6
 Summary:	Wrap text around floats
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/floatflt
