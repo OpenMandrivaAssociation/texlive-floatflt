@@ -1,19 +1,13 @@
-# revision 25540
-# category Package
-# catalog-ctan /macros/latex/contrib/floatflt
-# catalog-date 2012-02-29 15:33:26 +0100
-# catalog-license lppl1.3
-# catalog-version 1.31
 Name:		texlive-floatflt
-Version:	1.31
-Release:	13
+Version:	25540
+Release:	1
 Summary:	Wrap text around floats
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/floatflt
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/floatflt.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/floatflt.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/floatflt.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/floatflt.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/floatflt.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/floatflt.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -26,12 +20,12 @@ and allows tables/figures to be set left/right or alternating
 on even/odd pages.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -47,32 +41,11 @@ on even/odd pages.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Fri Mar 09 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 1.31-4
-+ Revision: 783481
-- rebuild without scriptlet dependencies
-
-* Wed Mar 07 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.31-3
-+ Revision: 782996
-- Update to latest release.
-
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.31-2
-+ Revision: 751927
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.31-1
-+ Revision: 718462
-- texlive-floatflt
-- texlive-floatflt
-- texlive-floatflt
-- texlive-floatflt
-
