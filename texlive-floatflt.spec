@@ -1,6 +1,6 @@
 Name:		texlive-floatflt
 Version:	25540
-Release:	1
+Release:	2
 Summary:	Wrap text around floats
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/floatflt
