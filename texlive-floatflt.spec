@@ -3,7 +3,7 @@ Version:	25540
 Release:	2
 Summary:	Wrap text around floats
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/floatflt
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/floatflt
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/floatflt.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/floatflt.doc.r%{version}.tar.xz
